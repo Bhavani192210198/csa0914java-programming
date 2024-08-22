@@ -1,0 +1,29 @@
+package project;
+public class matrixaddition {
+
+    public static void main(String[] args) {
+        int[][] mat1 = {{1, 2}, {5, 3}};
+        int[][] mat2 = {{2, 3}, {4, 1}};
+
+        int[][] matSum = addMatrices(mat1, mat2);
+
+        System.out.println("Mat Sum = ");
+        for (int i = 0; i < matSum.length; i++) {
+            for (int j = 0; j < matSum[0].length; j++) {
+                System.out.print(matSum[i][j] + "   ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int[][] addMatrices(int[][] mat1, int[][] mat2) {
+        int[][] matSum = new int[mat1.length][mat1[0].length];
+
+        for (int i = 0; i < mat1.length; i++) {
+            for (int j = 0; j < mat1[0].length; j++) {
+                matSum[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        return matSum;
+    }
+}

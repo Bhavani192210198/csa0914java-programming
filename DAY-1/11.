@@ -1,0 +1,21 @@
+public class BrotherAges {
+  public static void main(String[] args) {
+    int olderBrotherAge = 28;
+    int youngerBrotherAge = 24;
+
+    // Calculate the age difference
+    int ageDifference = olderBrotherAge - youngerBrotherAge;
+
+    // Find the age of the younger brother when the older brother is 56
+    int olderBrotherAge56 = 56;
+    int youngerBrotherAge56 = olderBrotherAge56 - ageDifference;
+
+    // Find the age of the younger brother when the older brother was 5
+    int olderBrotherAge5 = 5;
+    int youngerBrotherAge5 = olderBrotherAge5 - ageDifference;
+
+    System.out.println("The older brother's age when the younger brother is 24 is: " + olderBrotherAge);
+    System.out.println("The younger brother's age when the older brother is 56 is: " + youngerBrotherAge56);
+    System.out.println("The younger brother's age when the older brother was 5 is: " + youngerBrotherAge5);
+  }
+}

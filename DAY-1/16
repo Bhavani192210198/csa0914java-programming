@@ -1,0 +1,54 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class LuckyGuess {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    Random random = new Random();
+
+    int luckyNumber = random.nextInt(5) + 1; // generate a random number between 1 and 5
+    System.out.println("Guess a number between 1 and 5:");
+
+    int userGuess = scanner.nextInt();
+
+    switch (userGuess) {
+      case 1:
+        if (luckyNumber == 1) {
+          System.out.println(" Congratulations! You guessed the lucky number!");
+        } else {
+          System.out.println(" Sorry, the lucky number was " + luckyNumber);
+        }
+        break;
+      case 2:
+        if (luckyNumber == 2) {
+          System.out.println(" Congratulations! You guessed the lucky number!");
+        } else {
+          System.out.println(" Sorry, the lucky number was " + luckyNumber);
+        }
+        break;
+      case 3:
+        if (luckyNumber == 3) {
+          System.out.println(" Congratulations! You guessed the lucky number!");
+        } else {
+          System.out.println(" Sorry, the lucky number was " + luckyNumber);
+        }
+        break;
+      case 4:
+        if (luckyNumber == 4) {
+          System.out.println(" Congratulations! You guessed the lucky number!");
+        } else {
+          System.out.println(" Sorry, the lucky number was " + luckyNumber);
+        }
+        break;
+      case 5:
+        if (luckyNumber == 5) {
+          System.out.println(" Congratulations! You guessed the lucky number!");
+        } else {
+          System.out.println(" Sorry, the lucky number was " + luckyNumber);
+        }
+        break;
+      default:
+        System.out.println(" Invalid input. Please enter a number between 1 and 5.");
+    }
+  }
+}

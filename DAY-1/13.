@@ -1,0 +1,46 @@
+public class GreatestValue {
+  public static void main(String[] args) {
+    int[] loop1 = {10, 20, 30, 40, 50};
+    int[] loop2 = {60, 70, 80, 90, 100};
+    int[] loop3 = {110, 120, 130, 140, 150};
+
+    int greatestValue = 0;
+    String greatestLoop = "";
+
+    if (loop1[0] > greatestValue) {
+      greatestValue = loop1[0];
+      greatestLoop = "Loop 1";
+    }
+    for (int i = 1; i < loop1.length; i++) {
+      if (loop1[i] > greatestValue) {
+        greatestValue = loop1[i];
+        greatestLoop = "Loop 1";
+      }
+    }
+
+    if (loop2[0] > greatestValue) {
+      greatestValue = loop2[0];
+      greatestLoop = "Loop 2";
+    }
+    for (int i = 1; i < loop2.length; i++) {
+      if (loop2[i] > greatestValue) {
+        greatestValue = loop2[i];
+        greatestLoop = "Loop 2";
+      }
+    }
+
+    if (loop3[0] > greatestValue) {
+      greatestValue = loop3[0];
+      greatestLoop = "Loop 3";
+    }
+    for (int i = 1; i < loop3.length; i++) {
+      if (loop3[i] > greatestValue) {
+        greatestValue = loop3[i];
+        greatestLoop = "Loop 3";
+      }
+    }
+
+    System.out.println("The greatest value is: " + greatestValue);
+    System.out.println("The greatest value is in: " + greatestLoop);
+  }
+}

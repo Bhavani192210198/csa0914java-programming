@@ -1,0 +1,31 @@
+public class StringMethodsAndConstructors {
+  public static void main(String[] args) {
+    // String constructors
+    String str1 = new String("Hello");
+    String str2 = new String(new char[] {'H', 'e', 'l', 'l', 'o'});
+    String str3 = new String(new byte[] {72, 101, 108, 108, 111});
+
+    System.out.println("String constructors:");
+    System.out.println("str1: " + str1);
+    System.out.println("str2: " + str2);
+    System.out.println("str3: " + str3);
+
+    // String methods
+    String str = "Hello World";
+
+    System.out.println("\nString methods:");
+    System.out.println("Length: " + str.length());
+    System.out.println("UpperCase: " + str.toUpperCase());
+    System.out.println("LowerCase: " + str.toLowerCase());
+    System.out.println("Trim: " + str.trim());
+    System.out.println("Substring (0, 5): " + str.substring(0, 5));
+    System.out.println("Substring (6): " + str.substring(6));
+    System.out.println("IndexOf 'o': " + str.indexOf('o'));
+    System.out.println("LastIndexOf 'o': " + str.lastIndexOf('o'));
+    System.out.println("Contains 'World': " + str.contains("World"));
+    System.out.println("Replace 'World' with 'Universe': " + str.replace("World", "Universe"));
+    System.out.println("Split by space: " + java.util.Arrays.toString(str.split(" ")));
+    System.out.println("StartsWith 'Hello': " + str.startsWith("Hello"));
+    System.out.println("EndsWith 'World': " + str.endsWith("World"));
+  }
+}

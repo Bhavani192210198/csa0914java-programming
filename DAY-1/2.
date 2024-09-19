@@ -1,0 +1,53 @@
+public class DataTypeConversion {
+  public static void main(String[] args) {
+    // Implicit conversion (widening) from smaller data types to larger ones
+    byte byteValue = 10;
+    short shortValue = byteValue; // byte to short
+    int intValue = shortValue; // short to int
+    long longValue = intValue; // int to long
+    float floatValue = longValue; // long to float
+    double doubleValue = floatValue; // float to double
+
+    System.out.println("Implicit conversion:");
+    System.out.println("Byte value: " + byteValue);
+    System.out.println("Short value: " + shortValue);
+    System.out.println("Int value: " + intValue);
+    System.out.println("Long value: " + longValue);
+    System.out.println("Float value: " + floatValue);
+    System.out.println("Double value: " + doubleValue);
+
+    // Explicit conversion (narrowing) from larger data types to smaller ones
+    double doubleValue2 = 10.5;
+    float floatValue2 = (float) doubleValue2; // double to float
+    long longValue2 = (long) floatValue2; // float to long
+    int intValue2 = (int) longValue2; // long to int
+    short shortValue2 = (short) intValue2; // int to short
+    byte byteValue2 = (byte) shortValue2; // short to byte
+
+    System.out.println("\nExplicit conversion:");
+    System.out.println("Double value: " + doubleValue2);
+    System.out.println("Float value: " + floatValue2);
+    System.out.println("Long value: " + longValue2);
+    System.out.println("Int value: " + intValue2);
+    System.out.println("Short value: " + shortValue2);
+    System.out.println("Byte value: " + byteValue2);
+
+    byte byteValue3 = 127; // max value for byte
+    byte byteValue4 = (byte) (byteValue3 + 1); // overflow, wraps around to -128
+    System.out.println("\nOverflow scenario:");
+    System.out.println("Byte value: " + byteValue3);
+    System.out.println("Byte value after increment: " + byteValue4);
+
+    short shortValue3 = 32767; // max value for short
+    short shortValue4 = (short) (shortValue3 + 1); // overflow, wraps around to -32768
+    System.out.println("\nOverflow scenario:");
+    System.out.println("Short value: " + shortValue3);
+    System.out.println("Short value after increment: " + shortValue4);
+
+    byte byteValue5 = -128; // min value for byte
+    byte byteValue6 = (byte) (byteValue5 - 1); // underflow, wraps around to 127
+    System.out.println("\nUnderflow scenario:");
+    System.out.println("Byte value: " + byteValue5);
+    System.out.println("Byte value after decrement: " + byteValue6);
+  }
+}

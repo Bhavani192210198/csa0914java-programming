@@ -1,0 +1,53 @@
+public class MethodOverloading {
+    // Original method
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    // a) Overloading by increasing the number of parameters
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // a) Overloading by decreasing the number of parameters
+    int sum(int a) {
+        return a;
+    }
+
+    // b) Overloading by changing the data types of parameters
+    double sum(double a, double b) {
+        return a + b;
+    }
+
+    // b) Overloading by changing the data types of parameters
+    String sum(String a, String b) {
+        return a + b;
+    }
+
+    // c) Overloading by interchanging the parameters
+    int sum(int b, int a) {
+        return a + b; // Note: This is not a true overload, as the method signature is the same as the original method
+    }
+
+    public static void main(String[] args) {
+        MethodOverloading obj = new MethodOverloading();
+
+        // Original method
+        System.out.println("sum(2, 3) = " + obj.sum(2, 3)); // Output: 5
+
+        // a) Overloading by increasing the number of parameters
+        System.out.println("sum(2, 3, 4) = " + obj.sum(2, 3, 4)); // Output: 9
+
+        // a) Overloading by decreasing the number of parameters
+        System.out.println("sum(5) = " + obj.sum(5)); // Output: 5
+
+        // b) Overloading by changing the data types of parameters
+        System.out.println("sum(2.5, 3.5) = " + obj.sum(2.5, 3.5)); // Output: 6.0
+
+        // b) Overloading by changing the data types of parameters
+        System.out.println("sum(\"Hello\", \"World\") = " + obj.sum("Hello", "World")); // Output: HelloWorld
+
+        // c) Overloading by interchanging the parameters
+        System.out.println("sum(3, 2) = " + obj.sum(3, 2)); // Output: 5
+    }
+}

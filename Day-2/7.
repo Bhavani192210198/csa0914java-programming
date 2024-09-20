@@ -1,0 +1,48 @@
+// Interface 1
+interface Summable {
+    int sum(int[] numbers);
+}
+
+// Interface 2
+interface Averagable {
+    double avg(int[] numbers);
+}
+
+// Interface 3
+interface PercentageCalculable {
+    double percentage(int total, int part);
+}
+
+// Class that implements all 3 interfaces
+class DataProcessor implements Summable, Averagable, PercentageCalculable {
+    @Override
+    public int sum(int[] numbers) {
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    @Override
+    public double avg(int[] numbers) {
+        return (double) sum(numbers) / numbers.length;
+    }
+
+    @Override
+    public double percentage(int total, int part) {
+        return (double) part / total * 100;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        DataProcessor processor = new DataProcessor();
+
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        System.out.println("Sum: " + processor.sum(numbers));
+        System.out.println("Average: " + processor.avg(numbers));
+        System.out.println("Percentage: " + processor.percentage(100, 25));
+    }
+}

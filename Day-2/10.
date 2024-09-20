@@ -1,0 +1,36 @@
+public class MyClass {
+    public final int FINAL_VARIABLE = 10; // final variable
+
+    public void nonFinalMethod() {
+        System.out.println("Non-final method");
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        System.out.println("Final variable: " + obj.FINAL_VARIABLE);
+        // obj.FINAL_VARIABLE = 20; // cannot assign a value to a final variable
+        obj.nonFinalMethod();
+    }
+}
+public class MyClass {
+    public void nonFinalMethod() {
+        System.out.println("Non-final method");
+    }
+
+    public final void finalMethod() { // final method
+        System.out.println("Final method");
+    }
+}
+
+public class SubClass extends MyClass {
+    // @Override
+    // public void finalMethod() { // cannot override a final method
+    //     System.out.println("Overridden final method");
+    // }
+
+    public static void main(String[] args) {
+        SubClass obj = new SubClass();
+        obj.nonFinalMethod();
+        obj.finalMethod();
+    }
+}

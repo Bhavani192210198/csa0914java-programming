@@ -1,0 +1,13 @@
+public class MyClass {
+    public static int staticVariable = 10; // static variable
+
+    public void nonStaticMethod() {
+        System.out.println("Non-static method");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Static variable: " + staticVariable);
+        MyClass obj = new MyClass();
+        obj.nonStaticMethod();
+    }
+}

@@ -1,0 +1,59 @@
+// Interface
+interface Tree {
+    void fruits(String fruit1, String fruit2);
+    void leaves(String leaf1, String leaf2, String leaf3);
+    void flowers(String flower1, String flower2, String flower3, String flower4);
+}
+
+// Class 1 extending Tree
+class Branch1 implements Tree {
+    @Override
+    public void fruits(String fruit1, String fruit2) {
+        System.out.println("Branch1 has " + fruit1 + " and " + fruit2 + " fruits.");
+    }
+
+    @Override
+    public void leaves(String leaf1, String leaf2, String leaf3) {
+        System.out.println("Branch1 has " + leaf1 + ", " + leaf2 + ", and " + leaf3 + " leaves.");
+    }
+
+    @Override
+    public void flowers(String flower1, String flower2, String flower3, String flower4) {
+        System.out.println("Branch1 has " + flower1 + ", " + flower2 + ", " + flower3 + ", and " + flower4 + " flowers.");
+    }
+}
+
+// Class 2 extending Tree
+class Branch2 implements Tree {
+    @Override
+    public void fruits(String fruit1, String fruit2) {
+        System.out.println("Branch2 has " + fruit1 + " and " + fruit2 + " fruits.");
+    }
+
+    @Override
+    public void leaves(String leaf1, String leaf2, String leaf3) {
+        System.out.println("Branch2 has " + leaf1 + ", " + leaf2 + ", and " + leaf3 + " leaves.");
+    }
+
+    @Override
+    public void flowers(String flower1, String flower2, String flower3, String flower4) {
+        System.out.println("Branch2 has " + flower1 + ", " + flower2 + ", " + flower3 + ", and " + flower4 + " flowers.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Branch1 branch1 = new Branch1();
+        Branch2 branch2 = new Branch2();
+
+        branch1.fruits("Apple", "Banana");
+        branch1.leaves("Leaf1", "Leaf2", "Leaf3");
+        branch1.flowers("Rose", "Lily", "Sunflower", "Daisy");
+
+        System.out.println();
+
+        branch2.fruits("Mango", "Orange");
+        branch2.leaves("Leaf4", "Leaf5", "Leaf6");
+        branch2.flowers("Tulip", "Violet", "Poppy", "Lilac");
+    }
+}
